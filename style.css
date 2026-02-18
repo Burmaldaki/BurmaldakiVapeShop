@@ -1,0 +1,4 @@
+body { background: #0f0f10; color: white; font-family: sans-serif; padding: 20px; }
+.header { display: flex; justify-content: space-between; align-items: center; }
+.item { background: #1c1c1e; padding: 15px; border-radius: 15px; margin-top: 20px; text-align: center; }
+button { background: #7000ff; color: white; border: none; padding: 10px 20px; border-radius: 10px; cursor: pointer; }
