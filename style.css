@@ -68,15 +68,19 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     
-    color: black; /* или rgb(0,0,0) */
+    color: white;
     font-size: 24px;
     font-weight: 600;
     text-align: center;
 
-    text-shadow: 1px 1px 4px rgba(255,255,255,0.7); /* для читаемости на картинке */
+    text-shadow: 
+        -1px -1px 0 #000,
+         1px -1px 0 #000,
+        -1px  1px 0 #000,
+         1px  1px 0 #000;
 }
 
-.allprodukts-title {
+.all-products-title {
     font-size: 24px;
     font-weight: 600;
     margin-bottom: 12px;
@@ -122,4 +126,128 @@ body {
 .product-price {
     font-size: 16px;
     color: #ccc;
+}
+/* ===== Все товары ===== */
+
+.all-products {
+    margin-top: 30px;
+}
+
+.all-products-title {
+    font-size: 24px;
+    font-weight: 600;
+    color: white;
+    margin-bottom: 16px;
+}
+
+/* чтобы ссылка не была синей */
+.product-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+/* карточка товара */
+.product-card {
+    background-color: #222;
+    border-radius: 20px;
+    overflow: hidden;
+    padding-bottom: 16px;
+}
+
+.product-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.product-info {
+    padding: 12px 16px 0 16px;
+}
+
+.product-name {
+    font-size: 18px;
+    font-weight: 600;
+    color: white;
+    margin-bottom: 8px;
+}
+
+.product-price {
+    font-size: 16px;
+    color: #ccc;
+}
+
+/* ===== Страница товара ===== */
+
+.product-page {
+    background-color: #181818;
+    min-height: 100vh;
+}
+
+.product-image {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+}
+
+.product-content {
+    padding: 16px;
+    color: white;
+}
+
+.product-description {
+    color: #aaa;
+    margin: 10px 0;
+}
+
+.product-price-page {
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+/* выбор вкуса */
+.flavor-select {
+    background-color: #2a2a2a;
+    padding: 14px;
+    border-radius: 25px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.flavor-list {
+    display: none;
+    background-color: #222;
+    border-radius: 15px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.flavor-list.show {
+    display: block;
+}
+
+.flavor-item {
+    padding: 12px;
+    border-bottom: 1px solid #333;
+    cursor: pointer;
+}
+
+.flavor-item:last-child {
+    border-bottom: none;
+}
+
+.flavor-item:hover {
+    background-color: #333;
+}
+
+/* кнопка */
+.add-to-cart {
+    width: 100%;
+    padding: 16px;
+    border-radius: 30px;
+    border: none;
+    background: linear-gradient(45deg, purple, violet);
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
 }
