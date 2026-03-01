@@ -2,65 +2,66 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Каталог</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- Подключение CSS -->
+    <title>Каталог</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <div class="container">
-        <div class="title">Каталог</div>
+<div class="container">
 
-        <input 
-            type="text" 
-            class="search-input" 
-            placeholder="Поиск..."
-        >
-    </div>
+    <div class="title">Каталог</div>
+
+    <input type="text" class="search-input" placeholder="Поиск...">
+
+    <!-- Категории -->
     <div class="categories">
-    <h2 class="categories-title">Категории</h2>
+        <div class="categories-title">Категории</div>
 
-    <div class="categories-grid">
-        
-        <div class="category-card">
-            <img src="images/2026-02-25 23.47.05.jpg" alt="Жидкости">
-            <span>Жидкости</span>
-        </div>
+        <div class="categories-grid">
 
-        <div class="category-card">
-            <img src="images/одноразка.jpg" alt="Одноразки">
-            <span>Одноразки</span>
-        </div>
+            <div class="category-card">
+                <img src="images/2026-02-25 23.47.05.jpg">
+                <span>Жидкости</span>
+            </div>
 
-        <div class="category-card">
-            <img src="images/под.jpg" alt="Поды">
-            <span>Поды</span>
-        </div>
+            <div class="category-card">
+                <img src="images/одноразка.jpg">
+                <span>Одноразки</span>
+            </div>
 
-        <div class="category-card">
-            <img src="images/картридж.jpg" alt="Картриджи">
-            <span>Картриджи</span>
-        </div>
-        <div class="all-products">
-    <div class="all-products-title">Все товары</div>
+            <div class="category-card">
+                <img src="images/под.jpg">
+                <span>Поды</span>
+            </div>
 
-    <div class="product-card">
-        <img src="images/асортимент.jpg" alt="Товар">
+            <div class="category-card">
+                <img src="images/картридж.jpg">
+                <span>Картриджи</span>
+            </div>
 
-        <div class="product-info">
-            <div class="product-name">ELFLIQ 30ml</div>
-            <div class="product-price">zł 45</div>
         </div>
     </div>
+
+    <!-- Все товары -->
+    <div class="all-products">
+
+        <div class="all-products-title">Все товары</div>
+
+        <a href="product.html" class="product-link">
+            <div class="product-card">
+                <img src="images/асортимент.jpg">
+
+                <div class="product-info">
+                    <div class="product-name">ELFLIQ 30ml</div>
+                    <div class="product-price">zł 50</div>
+                </div>
+            </div>
+        </a>
+
+    </div>
+
 </div>
-        </div>
-    </div>
-
-    </div>
-</div>
-
 
 </body>
 </html>
