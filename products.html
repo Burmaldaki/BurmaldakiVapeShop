@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ELFLIQ 30ml</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="product-page">
+
+    <img src="images/асортимент.jpg" class="product-image">
+
+    <div class="product-content">
+        <h1>ELFLIQ 30ml</h1>
+        <p class="product-description">
+            Elfliq — фирменные жидкости с яркими вкусами.
+        </p>
+
+        <div class="product-price-page">zł 50</div>
+
+        <div class="flavor-select">Выберите вкус ▼</div>
+
+        <div class="flavor-list" id="flavorList">
+            <div class="flavor-item">Spearmint</div>
+            <div class="flavor-item">Watermelon Ice</div>
+            <div class="flavor-item">Blue Razz</div>
+        </div>
+
+        <button class="add-to-cart">Добавить в корзину</button>
+    </div>
+
+</div>
+
+<script>
+const flavorSelect = document.querySelector(".flavor-select");
+const flavorList = document.getElementById("flavorList");
+const flavorItems = document.querySelectorAll(".flavor-item");
+const addToCart = document.querySelector(".add-to-cart");
+
+flavorSelect.addEventListener("click", () => {
+    flavorList.classList.toggle("show");
+});
+
+flavorItems.forEach(item => {
+    item.addEventListener("click", () => {
+        flavorSelect.innerHTML = item.textContent + " ▼";
+        flavorList.classList.remove("show");
+        addToCart.style.opacity = "1";
+        addToCart.style.pointerEvents = "auto";
+    });
+});
+</script>
+
+</body>
+</html>
