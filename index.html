@@ -41,18 +41,69 @@
     <div class="all-products">
         <div class="all-products-title">Все товары</div>
 
-        <a href="product.html" class="product-link">
-            <div class="product-card">
-                <img src="images/асортимент.jpg">
-                <div class="product-info">
-                    <div class="product-name">ELFLIQ 30ml</div>
-                    <div class="product-price">zł 50</div>
-                </div>
+        <!-- КАРТОЧКА -->
+        <div class="product-card" onclick="openModal()">
+            <img src="images/асортимент.jpg">
+            <div class="product-info">
+                <div class="product-name">ELFLIQ 30ml</div>
+                <div class="product-price">zł 45</div>
             </div>
-        </a>
+        </div>
+
     </div>
 
 </div>
+
+<!-- МОДАЛКА -->
+<div id="productModal" class="modal" onclick="closeModal()">
+    <div class="modal-content" onclick="event.stopPropagation()">
+
+        <div class="modal-handle"></div>
+
+        <img src="images/асортимент.jpg" class="modal-img">
+
+        <h2>ELFLIQ 30ml</h2>
+
+        <p class="modal-desc">
+            Elfliq — фирменные жидкости Elf Bar с яркими вкусами.
+        </p>
+
+        <p class="price">zł45</p>
+
+        <div class="select-box" onclick="toggleDropdown()">
+            Выберите вкус
+        </div>
+
+        <div id="dropdown" class="dropdown">
+            <div onclick="selectFlavor('Mint')">Mint</div>
+            <div onclick="selectFlavor('Watermelon')">Watermelon</div>
+            <div onclick="selectFlavor('Berry')">Berry</div>
+        </div>
+
+        <button class="add-btn">Добавить в корзину</button>
+
+    </div>
+</div>
+
+<!-- JS -->
+<script>
+function openModal() {
+    document.getElementById("productModal").classList.add("active");
+}
+
+function closeModal() {
+    document.getElementById("productModal").classList.remove("active");
+}
+
+function toggleDropdown() {
+    document.getElementById("dropdown").classList.toggle("show");
+}
+
+function selectFlavor(flavor) {
+    document.querySelector(".select-box").innerText = flavor;
+    document.getElementById("dropdown").classList.remove("show");
+}
+</script>
 
 </body>
 </html>
