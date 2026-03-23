@@ -181,3 +181,172 @@ body {
     pointer-events: none;
     transition: 0.3s;
 }
+/* МОДАЛКА */
+.modal {
+    position: fixed;
+    bottom: -100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+    transition: 0.3s;
+    z-index: 1000;
+}
+
+.modal.active {
+    bottom: 0;
+}
+
+.modal-content {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: #1f1f1f;
+    border-radius: 20px 20px 0 0;
+    padding: 16px;
+}
+
+.modal-handle {
+    width: 40px;
+    height: 5px;
+    background: #555;
+    border-radius: 10px;
+    margin: 0 auto 10px;
+}
+
+.modal-img {
+    width: 100%;
+    border-radius: 12px;
+}
+
+.modal-desc {
+    color: #aaa;
+    font-size: 14px;
+}
+
+.price {
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+/* dropdown */
+.select-box {
+    background: #2a2a2a;
+    padding: 12px;
+    border-radius: 12px;
+    margin-top: 10px;
+}
+
+.dropdown {
+    display: none;
+    background: #2a2a2a;
+    border-radius: 12px;
+    margin-top: 5px;
+}
+
+.dropdown div {
+    padding: 10px;
+    border-bottom: 1px solid #444;
+}
+
+/* кнопка */
+.add-btn {
+    width: 100%;
+    margin-top: 15px;
+    padding: 14px;
+    border: none;
+    border-radius: 14px;
+    background: #555;
+    color: #aaa;
+    font-size: 16px;
+}
+/* МОДАЛКА */
+.modal {
+    position: fixed;
+    bottom: -100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+
+    transition: 0.3s;
+    z-index: 1000;
+}
+
+.modal.active {
+    bottom: 0;
+}
+
+.modal-content {
+    width: 100%;
+    max-height: 90%;
+    background: #1f1f1f;
+    border-radius: 20px 20px 0 0;
+    padding: 16px;
+    overflow-y: auto;
+}
+
+.modal-handle {
+    width: 40px;
+    height: 5px;
+    background: #555;
+    border-radius: 10px;
+    margin: 0 auto 10px;
+}
+
+.modal-img {
+    width: 100%;
+    border-radius: 12px;
+}
+
+.modal-desc {
+    color: #aaa;
+    font-size: 14px;
+}
+
+.price {
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+/* dropdown */
+.select-box {
+    background: #2a2a2a;
+    padding: 12px;
+    border-radius: 12px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.dropdown {
+    display: none;
+    background: #2a2a2a;
+    border-radius: 12px;
+    margin-top: 5px;
+}
+
+.dropdown.show {
+    display: block;
+}
+
+.dropdown div {
+    padding: 10px;
+    border-bottom: 1px solid #444;
+    cursor: pointer;
+}
+
+/* кнопка */
+.add-btn {
+    width: 100%;
+    margin-top: 15px;
+    padding: 14px;
+    border: none;
+    border-radius: 14px;
+    background: #555;
+    color: #aaa;
+    font-size: 16px;
+}
